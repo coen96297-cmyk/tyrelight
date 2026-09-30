@@ -1,0 +1,11 @@
+{
+  "_comment": "Core tyre temperature windows in Celsius. Keys are matched against AC's tyre compound name (exact name first, then family keyword). Edit to suit your car.",
+  "compounds": {
+    "slick":     { "cold_below": 80, "hot_above": 105, "overheat_above": 115 },
+    "semislick": { "cold_below": 75, "hot_above": 100, "overheat_above": 110 },
+    "street":    { "cold_below": 60, "hot_above": 90,  "overheat_above": 100 },
+    "vintage":   { "cold_below": 60, "hot_above": 85,  "overheat_above": 95 },
+    "rain":      { "cold_below": 40, "hot_above": 70,  "overheat_above": 80 },
+    "default":   { "cold_below": 70, "hot_above": 100, "overheat_above": 110 }
+  }
+}
