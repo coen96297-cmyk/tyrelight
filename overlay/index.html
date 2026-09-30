@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tyrelight overlay</title>
+<link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+<main id="overlay" class="overlay" data-live="false">
+
+  <header class="bar">
+    <div class="leds" id="leds" aria-label="MOZA wheel LEDs"></div>
+    <div class="session">
+      <span id="car">—</span><span class="sep">·</span><span id="track">—</span>
+      <span class="sep">·</span><span id="compound">—</span>
+    </div>
+    <div class="status" id="status">waiting for telemetry</div>
+  </header>
+
+  <section class="grid">
+    <div class="car">
+      <div class="tyre" data-tyre="0"><span class="pos">FL</span><span class="temp">--</span><span class="cond">—</span><span class="detail"></span></div>
+      <div class="tyre" data-tyre="1"><span class="pos">FR</span><span class="temp">--</span><span class="cond">—</span><span class="detail"></span></div>
+      <div class="chassis"><span id="speed">0</span><small>km/h</small><span id="gear" class="gear">N</span></div>
+      <div class="tyre" data-tyre="2"><span class="pos">RL</span><span class="temp">--</span><span class="cond">—</span><span class="detail"></span></div>
+      <div class="tyre" data-tyre="3"><span class="pos">RR</span><span class="temp">--</span><span class="cond">—</span><span class="detail"></span></div>
+    </div>
+
+    <div class="tiles">
+      <div class="tile delta" id="deltaTile">
+        <span class="label">Delta to best</span>
+        <span class="value" id="delta">—</span>
+        <span class="foot" id="deltaFoot">set a lap to start</span>
+      </div>
+      <div class="tile fuel" id="fuelTile">
+        <span class="label">Fuel</span>
+        <span class="value"><span id="fuel">—</span><small>L</small></span>
+        <span class="foot" id="fuelFoot">—</span>
+        <div class="meter"><div class="meter-fill" id="fuelBar"></div></div>
+      </div>
+      <div class="tile lap">
+        <span class="label">Lap <span id="lapNo">0</span></span>
+        <span class="value mono" id="lapTime">0:00.000</span>
+        <span class="foot">last <span id="lastTime" class="mono">—</span> · best <span id="bestTime" class="mono">—</span></span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="legend">
+    <span class="key cold">■ cold</span><span class="key ideal">■ ideal</span>
+    <span class="key hot">■ hot</span><span class="key overheated">■ overheated (blinks)</span>
+    <span class="window" id="window"></span>
+  </footer>
+</main>
+<script src="overlay.js"></script>
+</body>
+</html>
